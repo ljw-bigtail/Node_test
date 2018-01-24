@@ -9,21 +9,21 @@ var server = http.createServer(function (req, res) {
     // res response
     // 状态码、文件类型、字符集
     if (req.url == '/a') {
-        fs.readFile('./1.html', (err, data) => {
+        fs.readFile('./html/1.html', (err, data) => {
             res.writeHead(200, {
                 'Content-type': 'text/html;charset=UTF-8'
             });
             res.end('Hello World' + data);
         });
     } else if (req.url == '/b') {
-        fs.readFile('./2.html', (err, data) => {
+        fs.readFile('./html/2.html', (err, data) => {
             res.writeHead(200, {
                 'Content-type': 'text/html;charset=UTF-8'
             });
             res.end(data);
         });
     } else if (req.url == '/1.jpg') {
-        fs.readFile('./1.jpg', (err, data) => {
+        fs.readFile('./img/1.jpg', (err, data) => {
             res.end(data);
         });
     } else {
