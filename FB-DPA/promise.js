@@ -3,7 +3,8 @@ var mysql = require('mysql');
 var nodemailer = require('nodemailer');
 var pool  = mysql.createPool({  
   connectionLimit : 10,  
-  host            : '10.22.46.215',  
+  // host            : '10.22.46.215',  
+  host            : '10.22.146.246',  
   user            : 'read_only_user',  
   password        : 'read_only_user',
   database        : 'guava-mall'  
